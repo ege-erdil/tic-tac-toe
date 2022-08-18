@@ -3,10 +3,9 @@ import numpy as np
 from copy import deepcopy
 
 class TicTacToe:
-    def __init__(self, boardV=torch.zeros(size=(3, 3)), currPlayerV=1, illegalPenaltyV=1000):
+    def __init__(self, boardV=torch.zeros(size=(3, 3)), currPlayerV=1):
         self.board = boardV
         self.currPlayer = currPlayerV
-        self.illegalPenalty = illegalPenaltyV
 
     def currBoard(self):
         return tuple([x.item() for x in torch.flatten(self.board)])
